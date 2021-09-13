@@ -5,8 +5,6 @@ export const get = async (request) => {
 	const response = await api(request, `notes/${request.params.id}`)
 	
 	if (response.status === 404) {
-		// user hasn't created a note.
-		// start with an empty array
 		return { body: [] }
 	}
 
